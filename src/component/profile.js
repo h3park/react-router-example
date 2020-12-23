@@ -2,7 +2,7 @@ import React from 'react';
 
 const Profile = () => (
     <div>
-      Home page
+      Profile page
     </div>
 )
 export default Profile;

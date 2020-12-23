@@ -7,9 +7,11 @@ import Posts from './component/posts';
 import Profile from './component/profile';
 
 const App = () => (
-  <div>
-    Hello World
-  </div>
+  <BrowserRouter>
+    <Route path="/" component={Home}/>
+    <Route path="/posts" component={Posts}/>
+    <Route path="/profile"  component={Profile}/>
+  </BrowserRouter>
 )
 
 ReactDOM.render( <App />, document.getElementById('root')

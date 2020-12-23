@@ -6,7 +6,7 @@ const Profile = (props) => {
     return(
         <div>
             <Link to={{
-                pathname: `${props.match.url}/profile`
+                pathname: `${props.match.url}/post`
             }}>go to Posts</Link><br/>
             <p>Profile page</p>
         </div>

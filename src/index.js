@@ -8,7 +8,7 @@ import Profile from './component/profile';
 
 const App = () => (
   <BrowserRouter>
-    <Route path="/" component={Home}/>
+    <Route path="/" exact component={Home}/>
     <Route path="/posts" component={Posts}/>
     <Route path="/profile"  component={Profile}/>
   </BrowserRouter>

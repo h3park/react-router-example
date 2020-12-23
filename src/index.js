@@ -5,6 +5,7 @@ import {BrowserRouter, Route, Link} from 'react-router-dom';
 import Home from './component/home';
 import Posts from './component/posts';
 import Profile from './component/profile';
+import PostItem from './component/post_item'
 
 const App = () => (
   //pages are not reloading -> changing url dynamically and getting component we need 
@@ -19,8 +20,8 @@ const App = () => (
       }}>Profile</Link><br/>
     </header>
     <Route path="/" exact component={Home}/>
-    <Route path="/posts" component={Posts}/>
-    <Route path="/profile"  component={Profile}/>
+    <Route path="/posts" exact component={Posts}/>
+    <Route path="/profile" exact component={Profile}/>
   </BrowserRouter>
 )
 

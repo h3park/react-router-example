@@ -5,7 +5,8 @@ import {BrowserRouter, Route, Link, HashRouter, MemoryRouter, NavLink, Switch} f
 import Home from './component/home';
 import Posts from './component/posts';
 import Profile from './component/profile';
-import PostItem from './component/post_item'
+import PostItem from './component/post_item';
+import NotFound from './component/404';
 
 const App = () => (
   //pages are not reloading -> changing url dynamically and getting component we need 
@@ -27,7 +28,8 @@ const App = () => (
       <Route path="/posts/:id" component={PostItem}/>
       <Route path="/posts" component={Posts}/>
       <Route path="/profile" component={Profile}/>
-      <Route path="/" component={Home}/>
+      <Route path="/" exact component={Home}/>
+      <Route component={NotFound}/>
     </Switch>
   </BrowserRouter>
 )

@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {BrowserRouter, Route, Link, HashRouter, MemoryRouter, NavLink} from 'react-router-dom';
+import {BrowserRouter, Route, Link, HashRouter, MemoryRouter, NavLink, Switch} from 'react-router-dom';
 
 import Home from './component/home';
 import Posts from './component/posts';
@@ -22,11 +22,13 @@ const App = () => (
       }} exact activeStyle={{color: 'green'}}>Profile</NavLink><br/>
     
     </header>
-    
-    <Route path="/" exact component={Home}/>
-    <Route path="/posts" exact component={Posts}/>
-    <Route path="/posts/:id" component={PostItem}/>
-    <Route path="/profile" exact component={Profile}/>
+
+    <Switch> 
+      <Route path="/posts/:id" component={PostItem}/>
+      <Route path="/posts" component={Posts}/>
+      <Route path="/profile" component={Profile}/>
+      <Route path="/" component={Home}/>
+    </Switch>
   </BrowserRouter>
 )
 

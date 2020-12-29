@@ -7,7 +7,7 @@ const Profile = (props) => {
     }
     return(
         <>
-            <button onClick={()=>redirectuser()}>Redirect to Home</button>
+            <button onClick={()=>redirectuser()}>Redirect to Home</button> <br/>
             <Link to={{
                 pathname: `${props.match.url}/post`
             }}>go to Posts</Link><br/>
